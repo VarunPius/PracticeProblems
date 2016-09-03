@@ -1,0 +1,92 @@
+ Author:     Varun Pius Rodrigues
+ Date:       Sept 02, 2016
+ Problem:    Container With Most Water
+ Difficulty: Medium
+ Source:     https://leetcode.com/problems/container-with-most-water/
+
+/********************************************************************************** 
+* Given n non-negative integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). 
+* n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). 
+* 
+* Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+* 
+* Note: You may not slant the container.
+*               
+**********************************************************************************/
+
+Explanation:
+-----------------------------------------------------------------------------------------
+
+Here is a solution by n00tc0d3r from old discuss. Thanks n00tc0d3r.
+
+public int maxArea(int[] height) {  
+   int len = height.length, low = 0, high = len -1 ;  
+   int maxArea = 0;  
+   while (low < high) {  
+     maxArea = Math.max(maxArea, (high - low) * Math.min(height[low], height[high]));  
+     if (height[low] < height[high]) {  
+       low++;  
+     } else {  
+       high--;  
+     }  
+   }  
+   return maxArea;  
+ }
+Here is the proof.
+Proved by contradiction:
+
+Suppose the returned result is not the optimal solution. Then there must exist an optimal solution, say a container with a_ol and a_or (left and right respectively), such that it has a greater volume than the one we got. Since our algorithm stops only if the two pointers meet. So, we must have visited one of them but not the other. WLOG, let's say we visited a_ol but not a_or. When a pointer stops at a_ol, it won't move until
+
+The other pointer also points to a_ol.
+In this case, iteration ends. But the other pointer must have visited a_or on its way from right end to a_ol. Contradiction to our assumption that we didn't visit a_or.
+
+The other pointer arrives at a value, say a_rr, that is greater than a_ol before it reaches a_or.
+In this case, we does move a_ol. But notice that the volume of a_ol and a_rr is already greater than a_ol and a_or (as it is wider and heigher), which means that a_ol and a_or is not the optimal solution -- Contradiction!
+
+Both cases arrive at a contradiction.
+
+-----------------------------------------------------------------------------------------------------
+
+Here is a simple proof for the solution.
+Use v[low, high] indicates the volume of container with low and high. suppose height[low] < height[high], then we move low to low+1, that means we ingored v[low, high-1],v[low, high-2],etc, if this is safe, then the algorithm is right, and it's obvious that v[low, high-1],high[low, high-2]...... can't be larger than v[low, high] since its width can't be larger than high-low, and its height is limited by height[low].
+
+----------------------------------------------------------------------------------------------------
+
+The O(n) solution with proof by contradiction doesn't look intuitive enough to me. Before moving on, read the algorithm first if you don't know it yet.
+
+Here's another way to see what happens in a matrix representation:
+
+Draw a matrix where the row is the first line, and the column is the second line. For example, say n=6.
+
+In the figures below, x means we don't need to compute the volume for that case: (1) On the diagonal, the two lines are overlapped; (2) The lower left triangle area of the matrix is symmetric to the upper right area.
+
+We start by computing the volume at (1,6), denoted by o. Now if the left line is shorter than the right line, then all the elements left to (1,6) on the first row have smaller volume, so we don't need to compute those cases (crossed by ---).
+
+  1 2 3 4 5 6
+1 x ------- o
+2 x x
+3 x x x 
+4 x x x x
+5 x x x x x
+6 x x x x x x
+Next we move the left line and compute (2,6). Now if the right line is shorter, all cases below (2,6) are eliminated.
+
+  1 2 3 4 5 6
+1 x ------- o
+2 x x       o
+3 x x x     |
+4 x x x x   |
+5 x x x x x |
+6 x x x x x x
+And no matter how this o path goes, we end up only need to find the max value on this path, which contains n-1 cases.
+
+  1 2 3 4 5 6
+1 x ------- o
+2 x x - o o o
+3 x x x o | |
+4 x x x x | |
+5 x x x x x |
+6 x x x x x x
+Hope this helps. I feel more comfortable seeing things this way.
+
+
