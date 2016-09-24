@@ -1,4 +1,4 @@
-package linkedList_02;
+package Ch02_linkedList;
 
 import java.util.*;
 
@@ -13,12 +13,15 @@ public class RemoveDups {
 		head.insertNode(4);
 		head.insertNode(23);
 		System.out.println("input from here");
-		head.displayNode();
+		head.displayList();
 		
-		Node del = deleteDups(head);
+		//Node del = deleteDups(head);
+		Node delwo = delWoBuffer(head);
 		
 		System.out.println("Output from here");
-		del.displayNode();		
+		delwo.displayList();
+
+
 		
 	}
 	
@@ -51,9 +54,14 @@ public class RemoveDups {
 		while (curr != null){
 			Node recur = curr;
 			
-			while (recur != null){
-				
+			while (recur.next != null){
+				if(recur.next.data == curr.data)
+					recur.next = recur.next.next;
+				else
+					recur = recur.next;
 			}
+			
+			curr = curr.next;
 		}
 			
 		return head;

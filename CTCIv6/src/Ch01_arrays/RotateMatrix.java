@@ -1,4 +1,4 @@
-package arrays_01;
+package Ch01_arrays;
 
 public class RotateMatrix {
 

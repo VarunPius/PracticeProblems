@@ -1,4 +1,4 @@
-package linkedList_02;
+package Ch02_linkedList;
 
 public class Node {
 	int data;
@@ -19,7 +19,7 @@ public class Node {
 		curr.next = new Node(d);
 	}
 	
-	public void displayNode(){
+	public void displayList(){
 		Node curr = this;
 		
 		while(curr != null){

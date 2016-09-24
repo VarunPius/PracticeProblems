@@ -1,9 +1,9 @@
-package arrays_01;
+package Ch01_arrays;
 
 import java.io.*;
 import java.util.HashMap;
 
-public class PalindromePremutation {
+public class PalindromePermutation {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
