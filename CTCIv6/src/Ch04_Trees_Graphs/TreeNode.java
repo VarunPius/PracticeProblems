@@ -1,11 +1,13 @@
-package Ch04_Trees_Graphs.minimal_tree;
+package Ch04_Trees_Graphs;
+
+//import Ch04_Trees_Graphs.list_of_depths.TreeNode;
 
 public class TreeNode {
-  TreeNode left;
-  TreeNode right;
-  TreeNode parent;
-  int data;
-  int size;
+  public TreeNode left;
+  public TreeNode right;
+  public TreeNode parent;
+  public int data;
+  public int size;
 
   public TreeNode(int d){
     data = d;
@@ -16,7 +18,7 @@ public class TreeNode {
     return createBST(arr, 0, arr.length - 1);
   }
 
-  private static TreeNode createBST(int[] arr, int start, int end){
+  public static TreeNode createBST(int[] arr, int start, int end){
     if (end < start)
       return null;
 

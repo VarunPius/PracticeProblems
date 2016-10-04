@@ -1,4 +1,4 @@
-package Ch04_Trees_Graphs.minimal_tree;
+package Ch04_Trees_Graphs;
 
 public class MinimalTree {
 
