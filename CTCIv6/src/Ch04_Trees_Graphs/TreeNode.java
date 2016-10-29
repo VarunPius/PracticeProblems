@@ -68,6 +68,17 @@ public class TreeNode {
       }
     }
 
+
     return true;
+  }
+
+  public TreeNode find(int d){
+    if(data == d)
+      return this;
+
+    if(d<data)
+      return this.left.find(d);
+    else
+      return this.right.find(d);
   }
 }

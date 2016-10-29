@@ -1,0 +1,5 @@
+1.8: Zero Matrix
+3.1: Multisize stack (Dynamic Size Changing)
+4.7: Build Order
+4.9: BST Sequence
+4.11: Random Node

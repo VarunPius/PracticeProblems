@@ -12,21 +12,19 @@ public class Palindrome {
 		//head.insertNode(7);
 		head.insertNode(6);
 		head.insertNode(5);
-		
+
 		boolean op = isPalindrome(head);
-		
+
 		System.out.println("Output: " + op);
 
 	}
-	
+
 	public static boolean isPalindrome(Node head){
 		Node slow = head;
 		Node fast = head;
-		
-		Stack<Integer> st = new Stack<Integer>();
-		
 
-		
+		Stack<Integer> st = new Stack<Integer>();
+
 		while(fast != null && fast.next != null){
 			st.push(slow.data);
 			slow = slow.next;
@@ -46,7 +44,4 @@ public class Palindrome {
 
 		return true;
 	}
-	
-	
-
 }
