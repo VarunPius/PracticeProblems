@@ -57,13 +57,13 @@ public class TreeNode {
 
   public boolean isBST(){
     if(left != null){
-      if(data < left.data || left.isBST()){
+      if(data < left.data || !left.isBST()){
         return false;
       }
     }
 
     if(right != null){
-      if(data>=right.data || right.isBST()){
+      if(data>=right.data || !right.isBST()){
         return false;
       }
     }

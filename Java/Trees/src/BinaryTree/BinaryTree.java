@@ -76,23 +76,23 @@ public class BinaryTree {
 }
 
 /*
-Inorder Traversal:
-Node value is: 4
-Node value is: 2
+Inorder Traversal: 
 Node value is: 1
+Node value is: 2
 Node value is: 3
-Node value is: 6
+Node value is: 4
 Node value is: 5
+Node value is: 6
 Node value is: 7
 Node value is: 8
-Node value is: 12
-Node value is: 10
 Node value is: 9
+Node value is: 10
 Node value is: 11
-Node value is: 14
+Node value is: 12
 Node value is: 13
+Node value is: 14
 Node value is: 15
-Pre order Traversal:
+Pre order Traversal: 
 Node value is: 8
 Node value is: 4
 Node value is: 2
@@ -108,21 +108,21 @@ Node value is: 11
 Node value is: 14
 Node value is: 13
 Node value is: 15
-Post order Traversal:
-Node value is: 4
-Node value is: 2
+Post order Traversal: 
 Node value is: 1
 Node value is: 3
-Node value is: 6
+Node value is: 2
 Node value is: 5
 Node value is: 7
-Node value is: 12
-Node value is: 10
+Node value is: 6
+Node value is: 4
 Node value is: 9
 Node value is: 11
-Node value is: 14
+Node value is: 10
 Node value is: 13
 Node value is: 15
+Node value is: 14
+Node value is: 12
 Node value is: 8
 
 

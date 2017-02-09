@@ -1,0 +1,11 @@
+ Author:     Varun Pius Rodrigues
+ Date:       Dec 15, 2016
+ Problem:    Pow(x,n)
+ Difficulty: Medium
+ Source:     https://leetcode.com/problems/
+
+/********************************************************************************** 
+* 
+* Implement pow(x, n).
+*               
+**********************************************************************************/

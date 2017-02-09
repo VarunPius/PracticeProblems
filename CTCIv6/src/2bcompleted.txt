@@ -3,3 +3,5 @@
 4.7: Build Order
 4.9: BST Sequence
 4.11: Random Node
+4.12.2: paths with sum(hashmap)
+5.8: Draw Line
