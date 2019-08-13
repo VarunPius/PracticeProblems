@@ -18,42 +18,42 @@ class Node:
     def getData(self):
         return self.data
 
-
-class LinkedListFunc:
-    ##Node head
-    def __init__(self, head):
-        self.first = head
-
     def insert_at_end(self, next_node):
-        tmp_node = self.first
-
-        '''if (tmp_node):
-            while tmp_node.hasNext():
-                tmp_node = tmp_node.getNext()
-        '''
+        tmp_node = self
 
         if(tmp_node):
             while tmp_node.hasNext():       #tmp_node.next can also b used
                 tmp_node = tmp_node.getNext()
-                #tmp_node = tmp_node.next
 
         tmp_node.setNext(next_node)
 
+
     def printList(self):
-        tmp_node = self.first
+        tmp_node = self
+
+        printList = []
 
         if (tmp_node):
             while tmp_node:
-                print(str(tmp_node.getData()) + " -> ") #instead of tmp_node.getData() we can use tmp_node.data
+                printList.append(str(tmp_node.getData())) #instead of tmp_node.getData() we can use tmp_node.data
                 tmp_node = tmp_node.getNext()  #instead of tmp_node.getNext() we can use tmp_node.next
-        #tmp_node.getData()
 
-hd = Node(5)
-ll = LinkedListFunc(hd)
+        op = ''
+        for data in printList:
+            op = op + data + '->'
 
-#ll.insert_at_end(hd)
-ll.insert_at_end(Node(9))
-ll.insert_at_end(Node(10))
-ll.insert_at_end(Node(4))
+        op = op[:-2]
+        print(op)
 
-ll.printList()
+
+def main():
+    hd = Node(5)
+
+    hd.insert_at_end(Node(9))
+    hd.insert_at_end(Node(10))
+    hd.insert_at_end(Node(4))
+
+    hd.printList()
+
+if __name__ == '__main__':
+    main()
