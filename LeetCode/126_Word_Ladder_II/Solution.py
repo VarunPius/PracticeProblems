@@ -2,6 +2,7 @@ from collections import deque
 import sys
 import collections
 
+
 class Solution:
     def findLadders1(self, beginWord, endWord, wordList):
     #def findLadders(self, beginWord: str, endWord: str, wordList: List[str]) -> List[List[str]]:
@@ -71,7 +72,6 @@ class Solution:
         return result
 
 
-
 def main():
     soln = Solution()
     #i = soln.findLadders("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"])
@@ -105,4 +105,46 @@ if __name__ == '__main__':
 # tex can be reached as red->ted->tex or red->rex->tex
 # but instead it will replace the first with the second during loop run
 
+'''
+loop
+ted
+('layer', {'red': [['red']]})
+('before', [])
+('after', defaultdict(<type 'list'>, {'ted': [['red', 'ted']]}))
+rex
+('layer', {'red': [['red']]})
+('before', [])
+('after', defaultdict(<type 'list'>, {'rex': [['red', 'rex']], 'ted': [['red', 'ted']]}))
 
+
+loop
+tex
+('layer', defaultdict(<type 'list'>, {'rex': [['red', 'rex']], 'ted': [['red', 'ted']]}))
+('before', [])
+('after', defaultdict(<type 'list'>, {'tex': [['red', 'rex', 'tex']]}))
+
+tad
+('layer', defaultdict(<type 'list'>, {'rex': [['red', 'rex']], 'ted': [['red', 'ted']]}))
+('before', [])
+('after', defaultdict(<type 'list'>, {'tex': [['red', 'rex', 'tex']], 'tad': [['red', 'ted', 'tad']]}))
+
+tex
+('layer', defaultdict(<type 'list'>, {'rex': [['red', 'rex']], 'ted': [['red', 'ted']]}))
+('before', [['red', 'rex', 'tex']])
+('after', defaultdict(<type 'list'>, {'tex': [['red', 'rex', 'tex'], ['red', 'ted', 'tex']], 'tad': [['red', 'ted', 'tad']]}))
+
+
+loop
+tax
+('layer', defaultdict(<type 'list'>, {'tex': [['red', 'rex', 'tex'], ['red', 'ted', 'tex']], 'tad': [['red', 'ted', 'tad']]}))
+('before', [])
+('after', defaultdict(<type 'list'>, {'tax': [['red', 'rex', 'tex', 'tax'], ['red', 'ted', 'tex', 'tax']]}))
+tax
+('layer', defaultdict(<type 'list'>, {'tex': [['red', 'rex', 'tex'], ['red', 'ted', 'tex']], 'tad': [['red', 'ted', 'tad']]}))
+('before', [['red', 'rex', 'tex', 'tax'], ['red', 'ted', 'tex', 'tax']])
+('after', defaultdict(<type 'list'>, {'tax': [['red', 'rex', 'tex', 'tax'], ['red', 'ted', 'tex', 'tax'], ['red', 'ted', 'tad', 'tax']]}))
+
+
+loop
+[['red', 'rex', 'tex', 'tax'], ['red', 'ted', 'tex', 'tax'], ['red', 'ted', 'tad', 'tax']]
+'''

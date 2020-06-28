@@ -3,32 +3,32 @@ x   200      Number of Islands                       46.2%    Medium
     146      LRU Cache                               32.3%    Medium
 x   42       Trapping Rain Water                     48.1%    Hard
     1192     Critical Connections in a Network       48.7%    Hard
-    937      Reorder Data in Log Files               54.1%    Easy
-    5        Longest Palindromic Substring           29.2%    Medium
-    23       Merge k Sorted Lists                    39.5%    Hard
-    994      Rotting Oranges                         47.3%    Medium
-    53       Maximum Subarray                        46.2%    Easy
-    21       Merge Two Sorted Lists                  52.7%    Easy
-    15       3Sum                                    26.3%    Medium
-    121      Best Time to Buy and Sell Stock         50.1%    Easy
-    273      Integer to English Words                26.6%    Hard
+x   937      Reorder Data in Log Files               54.1%    Easy
+x   5        Longest Palindromic Substring           29.2%    Medium
+x   23       Merge k Sorted Lists                    39.5%    Hard
+X   994      Rotting Oranges                         47.3%    Medium
+x   53       Maximum Subarray                        46.2%    Easy
+x   21       Merge Two Sorted Lists                  52.7%    Easy
+x   15       3Sum                                    26.3%    Medium
+x   121      Best Time to Buy and Sell Stock         50.1%    Easy
+x   273      Integer to English Words                26.6%    Hard
     269      Alien Dictionary                        33.3%    Hard
-    973      K Closest Points to Origin              63.4%    Medium
-    253      Meeting Rooms II                        45.4%    Medium
-    138      Copy List with Random Pointer           35.1%    Medium
-    139      Word Break                              39.4%    Medium
-    49       Group Anagrams                          55.9%    Medium
-    692      Top K Frequent Words                    50.9%    Medium
-    297      Serialize and Deserialize Binary Tree   46.6%    Hard
-    380      Insert Delete GetRandom O(1)            46.3%    Medium
-    79       Word Search                             34.5%    Medium
-    295      Find Median from Data Stream            43.2%    Hard
+x   973      K Closest Points to Origin              63.4%    Medium
+x   253      Meeting Rooms II                        45.4%    Medium
+x   138      Copy List with Random Pointer           35.1%    Medium
+x   139      Word Break                              39.4%    Medium
+x   49       Group Anagrams                          55.9%    Medium
+x   692      Top K Frequent Words                    50.9%    Medium
+x   297      Serialize and Deserialize Binary Tree   46.6%    Hard
+x   380      Insert Delete GetRandom O(1)            46.3%    Medium
+x   79       Word Search                             34.5%    Medium
+x   295      Find Median from Data Stream            43.2%    Hard
 x   127      Word Ladder                             28.8%    Medium
-    239      Sliding Window Maximum                  42.3%    Hard
-    140      Word Break II                           31.0%    Hard
-    227      Basic Calculator II                     36.5%    Medium
-    212      Word Search II                          33.3%    Hard
-    155      Min Stack                               43.8%    Easy
+x   239      Sliding Window Maximum                  42.3%    Hard
+x   140      Word Break II                           31.0%    Hard
+x   227      Basic Calculator II                     36.5%    Medium
+x   212      Word Search II                          33.3%    Hard
+x   155      Min Stack                               43.8%    Easy
     240      Search a 2D Matrix II                   42.8%    Medium
     460      LFU Cache                               33.6%    Hard
 x   126      Word Ladder II                          21.6%    Hard

@@ -13,8 +13,7 @@ public class Solution {
           rslt.add(new ArrayList<>(mid));
           //return;
         }
-        else{
-          for(int i = start; i<nums.length; i++){
+
             if(i>start && nums[i] == nums[i-1]) continue;
             mid.add(nums[i]);           //to be discussed
             helper(rslt, mid, nums, currVal - nums[i], i+1);
