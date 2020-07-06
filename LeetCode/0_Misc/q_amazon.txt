@@ -1,6 +1,6 @@
 x   1        Two Sum                                 45.4%    Easy
 x   200      Number of Islands                       46.2%    Medium
-    146      LRU Cache                               32.3%    Medium
+x   146      LRU Cache                               32.3%    Medium
 x   42       Trapping Rain Water                     48.1%    Hard
     1192     Critical Connections in a Network       48.7%    Hard
 x   937      Reorder Data in Log Files               54.1%    Easy
@@ -29,23 +29,23 @@ x   140      Word Break II                           31.0%    Hard
 x   227      Basic Calculator II                     36.5%    Medium
 x   212      Word Search II                          33.3%    Hard
 x   155      Min Stack                               43.8%    Easy
-    240      Search a 2D Matrix II                   42.8%    Medium
+x   240      Search a 2D Matrix II                   42.8%    Medium
     460      LFU Cache                               33.6%    Hard
 x   126      Word Ladder II                          21.6%    Hard
     642      Design Search Autocomplete System       44.0%    Hard
-    472      Concatenated Words                      42.6%    Hard
-    819      Most Common Word                        44.4%    Easy
+x   472      Concatenated Words                      42.6%    Hard
+x   819      Most Common Word                        44.4%    Easy
     588      Design In-Memory File System            44.8%    Hard
-    210      Course Schedule II                      39.3%    Medium
-    763      Partition Labels                        74.9%    Medium
-    957      Prison Cells After N Days               39.6%    Medium
-    480      Sliding Window Median                   36.5%    Hard
+x   210      Course Schedule II                      39.3%    Medium
+x   763      Partition Labels                        74.9%    Medium
+x   957      Prison Cells After N Days               39.6%    Medium
+x   480      Sliding Window Median                   36.5%    Hard
     1152     Analyze User Website Visit Pattern      43.3%    Medium
-    1268     Search Suggestions System               62.7%    Medium
-    909      Snakes and Ladders                      37.9%    Medium
-    694      Number of Distinct Islands              55.4%    Medium
+x   1268     Search Suggestions System               62.7%    Medium
+x   909      Snakes and Ladders                      37.9%    Medium
+x   694      Number of Distinct Islands              55.4%    Medium
     353      Design Snake Game                       33.6%    Medium
     1167     Minimum Cost to Connect Sticks          62.1%    Medium
-    572      Subtree of Another Tree                 44.0%    Easy
-    1155     Number of Dice Rolls With Target Sum    49.2%    Medium
+x   572      Subtree of Another Tree                 44.0%    Easy
+x   1155     Number of Dice Rolls With Target Sum    49.2%    Medium
 
