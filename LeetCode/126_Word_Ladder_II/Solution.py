@@ -75,7 +75,7 @@ class Solution:
 def main():
     soln = Solution()
     #i = soln.findLadders("hit", "cog", ["hot", "dot", "dog", "lot", "log", "cog"])
-    i = soln.findLadders2("red", "tax", ["ted", "tex", "tax", "tad", "den", "rex", "pee"])
+    i = soln.findLadders("red", "tax", ["ted", "tex", "tax", "tad", "den", "rex", "pee"])
     print(i)
 
 
