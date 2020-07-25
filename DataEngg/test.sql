@@ -51,13 +51,67 @@ SELECT
 FROM
     Employee e1 JOIN Employee e2 ON e1.ManagerID = e2.ID
 
+-----------------------------------------------------------------
 
-{"headers": {"courses": ["student", "class"]},
-"rows": {"courses": [
-["A", "Math"],
-["B", "English"],
-["C", "Math"],
-["D", "Biology"],
-["E", "Math"],
-["F", "Math"],
-["A", "Math"]]}}
+SELECT a.company, a.num, a.stop, b.stop
+FROM route a JOIN route b ON
+  (a.company=b.company AND a.num=b.num)
+WHERE a.stop=53
+
+SELECT a.company, a.num, a.stop, b.stop
+FROM route a JOIN route b ON a.company=b.company
+    JOIN stops s ON a.stop = s.id and b.
+WHERE a.stop=53
+
+SELECT x.company, x.num, x.name, y.name
+FROM
+(SELECT a.company, a.num, a.stop, s.name
+FROM route a JOIN stops s ON a.stop = s.id) x,
+(SELECT b.company, b,num, b.stop, s.name
+FROM route b JOIN stops s ON b.stop = s.id) y
+where
+x.name = 'Craiglockhart'
+and y.name = 'London Road';
+
+SELECT x.company, x.num, x.name, y.name
+FROM
+(SELECT a.company, a.num, a.stop, s.name
+FROM route a JOIN stops s ON a.stop = s.id) x,
+(SELECT b.company, b.num, b.stop, s.name
+FROM route b JOIN stops s ON b.stop = s.id) y
+where
+x.company = y.company
+and x.num = y.num
+and x.name = 'Craiglockhart'
+and y.name = 'London Road';
+
+SELECT r1.company, r1.num, s1.name, s2.name
+FROM
+route r1 JOIN stops s1 ON s1.id = r1.stop
+JOIN route r2 ON r1.company = r2.company and r1.num = r2.num
+JOIN stops s2 ON s2.id = r2.stop
+and s1.name = 'Craiglockhart'
+and s2.name = 'London Road';
+
+SELECT r1.company, r1.num , r1.stop, r2.stop
+FROM
+route r1 JOIN route r2 ON r1.company = r2.company and r1.num = r2.num
+AND r1.stop = 115 and r2.stop = 137
+
+SELECT r1.company, r1.num
+FROM
+route r1 JOIN route r2 ON r1.company = r2.company and r1.num = r2.num
+AND r1.stop = 115 and r2.stop = 137
+
+
+SELECT DISTINCT(CITY) FROM STATION WHERE CITY REGEXP '^[aeiou]'
+SELECT
+    n,
+    CASE
+        WHEN p IS NULL then 'Root'
+        WHEN n in (SELECT p fROM BST where p not null) then 'Inner'
+        ELSE 'Leaf'
+    END
+FROM BST
+ORDER BY n;
+
