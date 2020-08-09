@@ -30,3 +30,4 @@ class Solution:
             for i in range(1, len(s)+1):
                 if s[:i] in wordDict:
                     self.dfs(s[i:], path + " " + s[:i], idx + i, wordDict, dp)
+

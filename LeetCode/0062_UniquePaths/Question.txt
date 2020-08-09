@@ -1,0 +1,41 @@
+ Author:     Varun Pius Rodrigues
+ Date:       Nov 28, 2016
+ Problem:    Unique Paths
+ Difficulty: Medium
+ Source:     https://leetcode.com/problems/unique-paths/
+
+/********************************************************************************** 
+ * 
+ * A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
+ * 
+ * The robot can only move either down or right at any point in time. The robot is trying to reach 
+ * the bottom-right corner of the grid (marked 'Finish' in the diagram below).
+ *    
+ *    
+ *    start                                                  
+ *    +---------+----+----+----+----+----+                   
+ *    |----|    |    |    |    |    |    |                   
+ *    |----|    |    |    |    |    |    |                   
+ *    +----------------------------------+                   
+ *    |    |    |    |    |    |    |    |                   
+ *    |    |    |    |    |    |    |    |                   
+ *    +----------------------------------+                   
+ *    |    |    |    |    |    |    |----|                   
+ *    |    |    |    |    |    |    |----|                   
+ *    +----+----+----+----+----+---------+                   
+ *                                   finish                  
+ *    
+ * 
+ * How many possible unique paths are there?
+ * 
+ * Above is a 3 x 7 grid. How many possible unique paths are there?
+ * 
+ * Note: m and n will be at most 100.
+ *               
+**********************************************************************************/
+
+The idea is like this:
+Since we only need to know N[m-1][n-1] for a m*n grid, it is a waste of space to keep the whole 2-dimensional array. And we also know that N[i][j] = N[i-1][j] + N[i][j-1], so if we use only a one dimensional array and let N[i] = N[i] + N[i-1]. i.e. the N[i] at the left side of the equation and N[i-1] actually stores the number of path at the next row in a 2-dimensional array, and N[i] at the right side of the equation stores the number of paths at the current row in a 2-dimensional array. So in general, every element on the left side of N[i] in the 1 dimensional array is actually the value at the next row if in a 2-dimensional array.
+By filling the array from left to right, we will never rewrite a value before we making use of it.
+
+

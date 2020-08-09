@@ -1,0 +1,18 @@
+ Author:     Varun Pius Rodrigues
+ Date:       August 6, 2020
+ Problem:    Restore IP Addresses
+ Difficulty: Medium
+ Source:     https://leetcode.com/problems/restore-ip-addresses/
+
+/**********************************************************************************
+*
+* Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+*
+* A valid IP address consists of exactly four integers (each integer is between 0 and 255) separated by single points.
+*
+* Example:
+*
+* Input: "25525511135"
+* Output: ["255.255.11.135", "255.255.111.35"]
+*
+**********************************************************************************/
