@@ -1,5 +1,6 @@
 import collections
 
+
 class Solution:
     #def orangesRotting(self, grid: List[List[int]]) -> int:
     def orangesRotting(self, grid):
@@ -24,7 +25,7 @@ class Solution:
         return timer
 
     def orangesRotting2(self, grid):
-        n,m = len(grid), len(grid[0])
+        n, m = len(grid), len(grid[0])
         Q = collections.deque([])
         cnt = 0
         for i in range(n):
@@ -34,8 +35,8 @@ class Solution:
         res = 0
         while Q:
             for _ in range(len(Q)):
-                i,j = Q.popleft()
-                for x, y in [(i+1,j), (i-1,j), (i,j+1), (i,j-1)]:
+                i, j = Q.popleft()
+                for x, y in [(i+1, j), (i-1, j), (i, j+1), (i, j-1)]:
                     if 0<=x<n and 0<=y<m and grid[x][y] == 1:
                         grid[x][y] = 2
                         cnt -= 1

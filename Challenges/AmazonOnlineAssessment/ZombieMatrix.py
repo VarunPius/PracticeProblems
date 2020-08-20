@@ -32,6 +32,7 @@ int minHours(int rows, int columns, List<List<Integer>> grid) {
 }
 """
 
+
 class Solution:
     def humanDays(self, matrix):
         """
@@ -43,7 +44,7 @@ class Solution:
 
         q = [[i, j] for i in range(row) for j in range(col) if matrix[i][j] == 1]
         time = 0
-        direction = [[1,0],[-1,0],[0,1],[0,-1]]
+        direction = [[1, 0], [-1, 0], [0, 1], [0, -1]]
 
         while True:
             new = []

@@ -63,7 +63,7 @@ class Element:
 
     def __lt__(self, other):
         if self.freq == other.freq:
-            return self.word > other.word
+            return self.word > other.word   # Note 1
         return self.freq < other.freq
 
 
@@ -93,3 +93,11 @@ def topKFrequent(k, keywords, reviews):
 
 
 print(topKFrequent(k, keywords, reviews))
+
+"""
+Note 1:
+Since we will be using heappop(), we remove (notice we said remove, as in ignore/delete) the smallest element
+The idea is in Min Heap we will get smallest element first. By pop we will remove this and discard and keep the rest.
+Why we did return self.word > other.word ? Because we assign lower value to "Z" compared to "A". 
+This way when count is same, A will be greater than Z which means in minheap Z gets deleted first
+"""

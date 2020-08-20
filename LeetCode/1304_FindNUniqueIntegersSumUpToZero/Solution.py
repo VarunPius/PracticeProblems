@@ -11,7 +11,6 @@ class Solution:
         return numList
 
 
-
 if __name__ == '__main__':
     soln = Solution()
     x = soln.sumZero(6)

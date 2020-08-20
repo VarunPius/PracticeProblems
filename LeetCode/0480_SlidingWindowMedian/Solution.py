@@ -7,7 +7,7 @@ class Solution:
         small, large = [], []
         for i, x in enumerate(nums[:k]):
             heapq.heappush(small, (-x, i))
-        for _ in range(k - (k >> 1)):
+        for _ in range(k - (k >> 1)):   # Move half the elements
             self.move(small, large)
 
         res.append(self.get_mid(small, large, k))
@@ -38,15 +38,18 @@ class Solution:
         return h2[0][0]*1.0 if k & 1 else (h2[0][0] - h1[0][0])/2.0
 
 """
-To calculate the median, we can maintain divide array into subarray equally: small and large. All elements in small are no larger than any element in large. 
-So median would be (largest in small + smallest in large) / 2 if small's size = large's size. If large's size = small's size + 1, median is smallest in large.
+To calculate the median, we can maintain divide array into subarray equally: small and large. 
+All elements in small are no larger than any element in large. 
+So median would be (largest in small + smallest in large) / 2 if small's size = large's size. 
+If large's size = small's size + 1, median is smallest in large.
 
 Thus, we can use heap here to maintain small(max heap) and large(min heap) so we can fetch smallest and largest element in logarithmic time.
 
 We can also maintain "large's size - small's size <= 1" and "smallest in large >= largest in small" by heap's property: once large's size - small's size > 1, we pop one element from large and add it to small. 
 And vice versa when small's size > large's size.
 
-Besides, since its a sliding window median, we need to keep track of window ends. So we will also push element's index to the heap. So each element takes a form of (val, index). 
+Besides, since its a sliding window median, we need to keep track of window ends. So we will also push element's index to the heap. 
+So each element takes a form of (val, index). 
 Since Python's heapq is a min heap, so we convert small to a max heap by pushing (-val, index).
 
 Intially for first k elements, we push them all into small and then pop k/2 element from small and add them to large.
@@ -59,5 +62,6 @@ So we will add one to large while remove one from small and heaps' sizes will be
 Vice versa when we have to add one to small while remove one from large.
 
 But we don't have to hurry and remove element in each iteration. As long as nums[i] is neither small[0] nor large[0], it has no effect to median calculation. 
-So we wait later and use a while loop to remove those out-of-window small[0] or large[0] at one time. This also make whole logic clearer.
+So we wait later and use a while loop to remove those out-of-window small[0] or large[0] at one time. 
+This also make whole logic clearer.
 """

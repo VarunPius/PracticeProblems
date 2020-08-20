@@ -1,5 +1,6 @@
 """
-You are given an undirected connected graph. An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph). The task is to find all articulation points in the given graph.
+You are given an undirected connected graph. An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph).
+The task is to find all articulation points in the given graph.
 
 Input:
 The input to the function/method consists of three arguments:
@@ -73,6 +74,7 @@ class Solution:
         visited.append(src)
         for child in graph[src]:
             self.dfs(graph, child, visited)
+
 
 if __name__ == '__main__':
     soln = Solution()
