@@ -48,25 +48,17 @@ x   353      Design Snake Game                       33.6%    Medium
 x   1167     Minimum Cost to Connect Sticks          62.1%    Medium
 x   572      Subtree of Another Tree                 44.0%    Easy
 x   1155     Number of Dice Rolls With Target Sum    49.2%    Medium
+x	2	    Add Two Numbers
+x	56	    Merge Intervals
+	348	    Design Tic-Tac-Toe
+x	103	    Binary Tree Zigzag Level Order Traversal
+x	863	    All Nodes Distance K in Binary Tree
+x	353	    Design Snake Game
+	901	    Online Stock Span
+-	1429	First Unique Number
+x	1120	Maximum Average Subtree
 
-153
-348
-490
-1197
-1102
-1429
-314
 
-277
-545
-317
-772
-1229
-333
-261
-296
-465
-759
 426
 1236
 362
