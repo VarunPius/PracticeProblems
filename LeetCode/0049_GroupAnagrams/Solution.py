@@ -13,6 +13,6 @@ if __name__ == '__main__':
 
 '''
 Note1:
-If used without tuple, it results in a unhasble type list error. This is because list can't be used as key in dict.
+If used without tuple, it results in a unhasble type list error.
+This is because list can't be used as key in dict.
 '''
-

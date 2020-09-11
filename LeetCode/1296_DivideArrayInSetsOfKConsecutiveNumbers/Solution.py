@@ -11,9 +11,9 @@ class Solution:
                 for j in range(k)[::-1]:
                     print(i, j)
                     print("*", c)
-                    c[i+j] -= c[i]
+                    c[i + j] -= c[i]
                     print("*#", c)
-                    if c[i+j]<0:
+                    if c[i + j] < 0:
                         return False
 
         return True

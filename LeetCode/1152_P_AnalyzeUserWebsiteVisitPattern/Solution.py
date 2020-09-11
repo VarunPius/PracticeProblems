@@ -10,7 +10,9 @@ class Solution:
 
         comb_dict = defaultdict(int)
         for web_list in by_user.values():
+            print(web_list)
             combs = set(combinations(web_list, 3))
+            print(combs)
             for comb in combs:
                 comb_dict[comb] += 1
 

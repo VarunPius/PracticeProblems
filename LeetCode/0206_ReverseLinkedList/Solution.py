@@ -17,6 +17,17 @@ class Solution:
 
         return prev
 
+    def reverseList1(self, head):
+        prev = None
+        curr = head
+        while curr:
+            post = curr.next
+            curr.next = prev
+            prev = curr
+            curr = post
+
+        return prev
+
     # Recursive
     def reverseList2(self, head):
         return self._reverse(head)
@@ -27,5 +38,3 @@ class Solution:
         n = node.next
         node.next = prev
         return self._reverse(n, node)
-
-

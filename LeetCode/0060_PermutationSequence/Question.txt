@@ -1,7 +1,7 @@
  Author:     Varun Pius Rodrigues
  Date:       Nov 28, 2016
  Problem:    Permutation Sequence
- Difficulty: Medium
+ Difficulty: Hard
  Source:     https://leetcode.com/problems/permutation-sequence/
 
 /********************************************************************************** 

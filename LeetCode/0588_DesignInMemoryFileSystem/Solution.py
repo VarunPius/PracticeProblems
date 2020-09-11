@@ -11,13 +11,12 @@ class FileSystem:
     def ls(self, path):
         if path in self.filecontent:
             return path.split("/")[-1]
-        return []
 
         cur = self.fs
         for token in path.split("/"):
             if token in cur:
                 cur = cur[token]
-            else:
+            elif token:
                 return []
 
         return sorted(cur.keys())
