@@ -29,7 +29,8 @@ Explanation
 # After the first loop, x is the only candidate.
 # The second and third loop is to verify x is actually a celebrity by definition.
 # 
-# The key part is the first loop. To understand this you can think the knows(a,b) as a a < b comparison, if a knows b then a < b, if a does not know b, a > b. 
+# The key part is the first loop. To understand this you can think the knows(a,b) as a a < b comparison, 
+if a knows b then a < b, if a does not know b, a > b. 
 # Then if there is a celebrity, he/she must be the "maximum" of the n people.
 # 
 # However, the "maximum" may not be the celebrity in the case of no celebrity at all. 

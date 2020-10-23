@@ -26,10 +26,10 @@ class Solution:
 
 """
 	root
-    / 
-  1 
- / \ 
-3  4  
+    /
+  1
+ / \
+3  4
 Let's see what is happening with this code.
 
 Node(4).right = None
@@ -43,4 +43,19 @@ Node(1).left = None
 prev = Node(1)->Node(3)->Node(4) (Which is the answer)
 The answer use self.prev to recode the ordered tree of the right part of current node.
 Remove the left part of current node
+"""
+
+"""
+def flatten(self, root):
+    last=TreeNode(-1)
+    qstack=[root]
+    while qstack:
+        node=qstack.pop()
+        last.right=node
+        last.left=None
+        if node and node.right:
+            qstack.append(node.right)
+        if node and node.left:
+            qstack.append(node.left)
+        last=node
 """

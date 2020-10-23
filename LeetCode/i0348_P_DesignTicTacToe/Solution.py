@@ -24,29 +24,6 @@ class TicTacToe:
 # param_1 = obj.move(row,col,player)
 
 """
-Record the number of moves for each rows, columns, and two diagonals.
-For each move, we -1 for each player 1's move and +1 for player 2's move.
-Then we just need to check whether any of the recored numbers equal to n or -n.
-
-class TicTacToe(object):
-
-    def __init__(self, n):
-        self.row, self.col, self.diag, self.anti_diag, self.n = [0] * n, [0] * n, 0, 0, n
-        
-    def move(self, row, col, player):
-        offset = player * 2 - 3
-        self.row[row] += offset
-        self.col[col] += offset
-        if row == col:
-            self.diag += offset
-        if row + col == self.n - 1:
-            self.anti_diag += offset
-        if self.n in [self.row[row], self.col[col], self.diag, self.anti_diag]:
-            return 2
-        if -self.n in [self.row[row], self.col[col], self.diag, self.anti_diag]:
-            return 1
-        return 0
-
 Let's only look at rows first:
 row[] represents the move count of a row
 If player1 move on a cell in row[1], then row[1]+=1
@@ -80,6 +57,33 @@ class TicTacToe:
         if abs(self.row[row])==self.n or abs(self.col[col])==self.n \
             or abs(self.diag1)==self.n or abs(self.diag2)==self.n:
             return 1 if player==1 else 2
+        return 0
+
+"""
+
+"""
+Solution 2:
+Record the number of moves for each rows, columns, and two diagonals.
+For each move, we -1 for each player 1's move and +1 for player 2's move.
+Then we just need to check whether any of the recored numbers equal to n or -n.
+
+class TicTacToe(object):
+
+    def __init__(self, n):
+        self.row, self.col, self.diag, self.anti_diag, self.n = [0] * n, [0] * n, 0, 0, n
+        
+    def move(self, row, col, player):
+        offset = player * 2 - 3
+        self.row[row] += offset
+        self.col[col] += offset
+        if row == col:
+            self.diag += offset
+        if row + col == self.n - 1:
+            self.anti_diag += offset
+        if self.n in [self.row[row], self.col[col], self.diag, self.anti_diag]:
+            return 2
+        if -self.n in [self.row[row], self.col[col], self.diag, self.anti_diag]:
+            return 1
         return 0
 
 """

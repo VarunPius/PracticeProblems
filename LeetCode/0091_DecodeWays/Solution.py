@@ -14,6 +14,8 @@ class Solution:
                 dp[i] += dp[i - 2]
 
         return dp[-1]
+
+
 """
 Note 1:
 This is my first post. Please let me know if this is helpful and if there's anything I can do to improve.

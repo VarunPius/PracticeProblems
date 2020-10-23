@@ -3,11 +3,20 @@ class Solution:
     def minAvailableDuration(self, slots1, slots2, duration: int):
         return
 
+"""
+s1 = [[10,50],[60,120],[140,210]]
+s2 = [[120,135],[60,70]]
+d = 15
+s = list(filter(lambda slot: slot[1] - slot[0] >= d, s1 + s2))
+heapq.heapify(s)
+
+
+"""
 
 """
 Solution 1: simple code using PriorityQueue/heapq w/ brief explanation and analysis
 - Put both slots1 and slots2 into PriorityQueue/heapq (first filter slots shorter than duration, credit to @SunnyvaleCA), sort by starting time;
-- Pop out the slots one by one, comparing every consective two to check if having duration time in common.
+- Pop out the slots one by one, comparing every consecutive two to check if having duration time in common.
 
     def minAvailableDuration(self, slots1: List[List[int]], slots2: List[List[int]], duration: int) -> List[int]:
         s = list(filter(lambda slot: slot[1] - slot[0] >= duration, slots1 + slots2))

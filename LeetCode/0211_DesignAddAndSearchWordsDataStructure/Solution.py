@@ -27,7 +27,8 @@ class WordDictionary:
 
     def search(self, word: str) -> bool:
         """
-        Returns if the word is in the data structure. A word could contain the dot character '.' to represent any one letter.
+        Returns if the word is in the data structure.
+        A word could contain the dot character '.' to represent any one letter.
         """
         node = self.root
         self.result = False
