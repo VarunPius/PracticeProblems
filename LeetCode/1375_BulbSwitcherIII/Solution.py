@@ -3,11 +3,13 @@ class Solution:
         right = ans = 0
         for i, bulb in enumerate(light, 1):
             right = max(right, bulb)
-            ans = right == i
+            ans += right == i
         return ans
 
 
 """
+i/p: [2,1,3,5,4]
+
 Explanation
 
 right is the number of the right most lighted bulb.
@@ -21,7 +23,6 @@ it means that all the previous bulbs (to the left) are turned on too.
 Then we increment res
 
 Complexity
-
-Time O(N)
-Space O(1)
+    Time O(N)
+    Space O(1)
 """

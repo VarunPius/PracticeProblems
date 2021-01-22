@@ -25,6 +25,26 @@ class Solution:
                     que.append((node.left, level + 1))
                     que.append((node.right, level + 1))
 
+
+if __name__ == "__main__":
+    root = TreeNode(3)
+    node9 = TreeNode(9)
+    node20 = TreeNode(20)
+    node15 = TreeNode(15)
+    node7 = TreeNode(7)
+    node5 = TreeNode(5)
+
+    root.left = node9
+    root.right = node20
+    node20.left = node15
+    node20.right = node7
+    node7.left = node5
+
+    soln = Solution()
+    x = soln.minDepth(root) 
+    print(x)   
+
+
 """
 # DFS
 def minDepth1(self, root):

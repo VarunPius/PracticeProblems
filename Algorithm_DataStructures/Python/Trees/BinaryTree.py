@@ -1,3 +1,5 @@
+from collections import deque
+
 class Node:
     def __init__(self, data):
         self.val = data
@@ -55,7 +57,43 @@ def printPreOrderIterative(root):
     return
 
 def printPostOrderIterative(root):
+    lst = []
+    stck = deque() # [] 1 <-> 2 <-> 3 
+
+    if not root:
+        return None
+
+    stck.append(root)
+    prev = None
+    while stck:
+        curr = stck[-1] # peek()
+
+        if (prev is None) or (prev.left == curr) or (prev.right == curr):
+            if curr.left:
+                stck.append(curr.left)
+            elif curr.right:
+                stck.append(curr.right)
+            else:
+                stck.pop()
+                lst.append(curr.val)
+        elif curr.left == prev:
+            if curr.right:
+                stck.append(curr.right)
+            else:
+                stck.pop()
+                lst.append(curr.val)
+        elif curr.right == prev:
+            stck.pop()
+            lst.append(curr.val)
+        
+        prev = curr
+    
+    output = ""
+    for val in lst:
+        output += str(val) + " -> "
+    print(output)
     return
+
 
 def initNodes():
     root = Node(8)
@@ -111,3 +149,18 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+"""
+Tree:
+                            8
+              /-----------/   \---------\         
+            4                             12
+     /-----/ \-----\             /-------/  \---\
+    2               6           10              14
+  /   \           /   \        /   \          /    \ 
+1       3       5       7     9     11      13       15
+            
+stack = 1 2 3 4 
+list = 1, 3, 2, 5 7 6 4 9 11 ... 8
+
+"""
